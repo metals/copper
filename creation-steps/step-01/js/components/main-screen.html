@@ -1,0 +1,41 @@
+<link rel="import" href="../vendors/polymer/polymer.html">
+
+<polymer-element name="main-screen">
+
+  <template>
+
+    <core-scaffold>
+
+      <core-header-panel navigation flex>
+        <core-toolbar>
+          <span>Menu</span>
+        </core-toolbar>
+        <core-menu>
+          <core-item label="One"></core-item>
+          <core-item label="Two"></core-item>
+          <core-item label="Three"></core-item>
+        </core-menu>
+      </core-header-panel>
+
+      <span tool>
+        My Killer Mobile Application
+      </span>
+
+      <div fit>
+        <h1>Polymer Rocks!</h1>
+      </div>
+
+    </core-scaffold>
+  </template>
+
+  <script>
+
+    Polymer("main-screen", {
+      ready: function() {
+        console.log("Main screen is ready!")
+      }
+    });
+
+  </script>
+
+</polymer-element>
