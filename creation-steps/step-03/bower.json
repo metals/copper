@@ -1,9 +1,0 @@
-{
-  "name": "copper",
-  "version": "0.0.0",
-  "dependencies": {
-    "polymer": "Polymer/polymer#~0.3.5",
-    "core-elements": "Polymer/core-elements#~0.3.5",
-    "paper-elements": "Polymer/paper-elements#~0.3.5"
-  }
-}
