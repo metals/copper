@@ -1,0 +1,48 @@
+<link rel="import" href="../vendors/polymer/polymer.html">
+
+<polymer-element name="main-screen" attributes="menuTitle mainTitle">
+
+  <template>
+    <link rel="stylesheet" href="main-screen.css">
+    <core-scaffold>
+
+      <core-header-panel navigation flex>
+        <core-toolbar>
+          <span>{{menuTitle}}</span>
+        </core-toolbar>
+        <core-menu>
+          <core-item num="0" label="Android" icon="android"></core-item>
+          <core-item num="1" label="Bug Report" icon="bug-report"></core-item>
+          <core-item num="2" label="Account" icon="account-circle"></core-item>
+        </core-menu>
+      </core-header-panel>
+
+      <span tool>
+        {{mainTitle}}
+        <paper-shadow z="1"></paper-shadow>
+      </span>
+
+      <div fit class="content">
+        <h1>Polymer Rocks!</h1>
+        <core-pages id="pages" selected="0">
+          <div>One</div>
+          <div>Two</div>
+          <div>Three</div>
+        </core-pages>
+      </div>
+
+    </core-scaffold>
+  </template>
+
+  <script>
+
+    Polymer("main-screen", {
+      ready: function() {
+        console.log("Main screen is ready!");
+        this.pages = this.$.pages;
+      }
+    });
+
+  </script>
+
+</polymer-element>
