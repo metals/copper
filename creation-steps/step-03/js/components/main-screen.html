@@ -10,7 +10,8 @@
         <core-toolbar>
           <span>{{menuTitle}}</span>
         </core-toolbar>
-        <core-menu>
+        <core-menu on-core-select="{{selectAction}}">
+          <!-- num is personnalized attribute -->
           <core-item num="0" label="Android" icon="android"></core-item>
           <core-item num="1" label="Bug Report" icon="bug-report"></core-item>
           <core-item num="2" label="Account" icon="account-circle"></core-item>
@@ -25,9 +26,9 @@
       <div fit class="content">
         <h1>Polymer Rocks!</h1>
         <core-pages id="pages" selected="0">
-          <div>One</div>
-          <div>Two</div>
-          <div>Three</div>
+          <div>You have selected "Android"</div>
+          <div>You have selected "Bug Report"</div>
+          <div>You have selected "Account"</div>
         </core-pages>
       </div>
 
@@ -38,8 +39,13 @@
 
     Polymer("main-screen", {
       ready: function() {
-        console.log("Main screen is ready!");
         this.pages = this.$.pages;
+      },
+      selectAction: function (e, detail) {
+        if (detail.isSelected) {
+          var selectedItem = detail.item;
+          this.pages.selected = selectedItem.attributes.num.nodeValue;
+        }
       }
     });
 
