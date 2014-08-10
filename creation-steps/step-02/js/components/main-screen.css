@@ -5,13 +5,13 @@ core-scaffold {
     font-family: sans-serif;
 }
 
-/* menu bar of left panel */
+/* menu bar of the left panel */
 core-toolbar {
     background: #000000;
     color: #fafafa;
 }
 
-/* content of left panel */
+/* content of the left panel */
 core-header-panel {
     background: #616161;
     color: #fafafa;
@@ -25,13 +25,12 @@ core-header-panel {
 http://stackoverflow.com/questions/24594333/polymer-core-scaffold-coloring-and-paper-button
 */
 
-
-
+/* title bar of the right panel */
 core-scaffold::shadow core-toolbar {
     background: #ff5722;
     color: #fafafa;
 }
-
+/* content of the right panel */
 core-scaffold::shadow core-header-panel {
     background: #ffccbc;
     color: #212121;

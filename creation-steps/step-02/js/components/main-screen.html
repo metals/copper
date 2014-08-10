@@ -1,6 +1,6 @@
 <link rel="import" href="../vendors/polymer/polymer.html">
 
-<polymer-element name="main-screen">
+<polymer-element name="main-screen" attributes="menuTitle mainTitle">
 
   <template>
     <link rel="stylesheet" href="main-screen.css">
@@ -8,7 +8,7 @@
 
       <core-header-panel navigation flex>
         <core-toolbar>
-          <span>Menu</span>
+          <span>{{menuTitle}}</span>
         </core-toolbar>
         <core-menu>
           <core-item label="Android" icon="android"></core-item>
@@ -18,7 +18,8 @@
       </core-header-panel>
 
       <span tool>
-        My Killer Mobile Application
+        {{mainTitle}}
+        <paper-shadow z="1"></paper-shadow>
       </span>
 
       <div fit class="content">
@@ -32,7 +33,7 @@
 
     Polymer("main-screen", {
       ready: function() {
-        console.log("Main screen is ready!")
+        console.log("Main screen is ready!");
       }
     });
 
